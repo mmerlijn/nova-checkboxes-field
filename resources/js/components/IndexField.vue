@@ -1,34 +1,16 @@
 <template>
-    <span class="w-full">
+    <div class="w-full">
         <span
-            v-for="(value, option) in availableOptions"
-            :key="option"
-            :class="optionClass(option)"
-            :title="value"
-            class="inline-block rounded-full w-2 h-2 mr-1"
-        />
-    </span>
+            v-for="item in Object.entries(field.options)"
+            :key="item[1]"
+            :title="item[1]"
+            :class="['rounded-full w-2 h-2 mr-1',field.value.map((i)=>String(i)).includes(item[0]) ? 'bg-green-600' : 'bg-red-600' ]"
+        >&nbsp;</span>
+    </div>
 </template>
 
 <script>
 export default {
   props: ['resourceName', 'field'],
-
-  computed: {
-      availableOptions() {
-          return this.field.options
-      },
-//    fieldValue() {
-//      return this.field.displayedAs || this.field.value
-//    },
-  },
-    methods: {
-        optionClass(option) {
-            return {
-                'bg-success': this.field.value ? this.field.value.includes(option) : false,
-                'bg-danger': this.field.value ? !this.field.value.includes(option) : true,
-            }
-        },
-    },
 }
 </script>
