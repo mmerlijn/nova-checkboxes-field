@@ -6,7 +6,7 @@
         :full-width-content="fullWidthContent"
     >
         <template #field>
-            <div class="text-sm grid grid-rows-4 grid-flow-col gap-2">
+            <div class="text-sm grid grid-cols-2 grid-flow-row gap-2">
                 <template v-for="(label, option) in field.options">
                     <div class="flex items-center">
                         <input
@@ -42,7 +42,7 @@ export default {
 
     methods: {
         isChecked(option) {
-            return this.value ? this.value.includes(option) : false
+            return this.value ? this.value.map((i)=>String(i)).includes(option) : false
         },
         toggleOption(option) {
             if (this.isChecked(option)) {

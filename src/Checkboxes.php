@@ -24,25 +24,7 @@ class Checkboxes extends Field
     {
         return $this->withMeta(['options' => $options]);
     }
-    /**
-     * The meta data for the element.
-     *
-     * @var array
-     */
-    public $meta = [
-        'columns' => 2,
-    ];
 
-    /**
-     * Specify the number of columns.
-     *
-     * @param array $columns
-     * @return self
-     */
-    public function columns(int $columns)
-    {
-        return $this->withMeta(['columns' => $columns]);
-    }
 
     /**
      * Disable type casting of array keys to numeric values to return the unmodified keys.

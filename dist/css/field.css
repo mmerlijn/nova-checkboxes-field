@@ -1,2 +1,1 @@
-/* Nova Field CSS */
-
+.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}.grid-rows-2{grid-template-rows:repeat(2,minmax(0,1fr))}.grid-rows-3{grid-template-rows:repeat(3,minmax(0,1fr))}.grid-rows-4{grid-template-rows:repeat(4,minmax(0,1fr))}.grid-flow-col{grid-auto-flow:column}.grid-flow-row{grid-auto-flow:row}.bg-green-600{background-color:#16a34a}.bg-red-600{background-color:#dc2626}.rounded-full{border-radius:9999px}.w-2{width:.5rem}.h-2{height:.5rem}.mr-1{margin-right:.25rem}
