@@ -52,6 +52,13 @@ public function getPermissionArrayAttribute()
 }
 ```
 
+### Only for developing
+Make changes after nova update
+```bash
+cd vendor/laravel/nova && npm install
+```
+
+
 
 ### Credits to
 [Silvanite](https://github.com/Silvanite/novafieldcheckboxes)
