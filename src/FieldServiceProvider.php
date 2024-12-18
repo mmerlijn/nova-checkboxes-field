@@ -1,6 +1,6 @@
 <?php
 
-namespace mmerlijn\NovaCheckboxesField;
+namespace Mmerlijn\NovaCheckboxesField;
 
 use Illuminate\Support\ServiceProvider;
 use Laravel\Nova\Events\ServingNova;
@@ -15,6 +15,9 @@ class FieldServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        //Nova::serving(function (ServingNova $event) {
+        //    Nova::mix('nova-checkboxes-field', __DIR__.'/../dist/mix-manifest.json');
+        //});
         Nova::serving(function (ServingNova $event) {
             Nova::script('nova-checkboxes-field', __DIR__.'/../dist/js/field.js');
             Nova::style('nova-checkboxes-field', __DIR__.'/../dist/css/field.css');
